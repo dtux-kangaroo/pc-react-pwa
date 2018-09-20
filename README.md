@@ -1,7 +1,7 @@
 **本项目wepack4，测试通过，快来体验吧！**
 #### 使用技术
 ```text
- 热更新、ES6/7、LESS、Router4、redux、webpack4、async／await、前端node服务器，按需加载...
+ PWA,ES6/7、LESS、Router4、redux、webpack4、async／await前端node服务器，按需加载...
 ```
 #### 客户端渲染
 ```
