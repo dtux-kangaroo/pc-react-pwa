@@ -1,14 +1,8 @@
 **本项目wepack4，测试通过，快来体验吧！**
 #### 使用技术
 ```text
- PWA,ES6/7、LESS、Router4、redux、webpack4、async／await前端node服务器，按需加载...
-```
-#### 客户端渲染
-```
-本项目是客户端渲染版本
-对于 HTTP/1.1 客户端，由 webpack 打包你的应用程序会尤其强大，因为在浏览器发起一个新请求时，
-它能够减少应用程序必须等待的时间。对于 HTTP/2，你还可以使用代码拆分(Code Splitting)以及通过 
-webpack 打包来实现最佳优化。
+ 支持PWA,ES6/7、LESS、Router4、redux、webpack4、async／await前端node服务器，按需加载...
+ 通过webpack 自动生产service-worker.js
 ```
 
 ==========================
