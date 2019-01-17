@@ -51,7 +51,9 @@ export default class UserList extends Component {
     return (
       <div className="container">
        <Row>
-         <Col><Table rowSelection={rowSelection} bordered  rowKey="id"    loading={isLoad} columns={usercln} dataSource={userList} /></Col>
+         <Col>
+         <iframe style={{border:0,width:"100%",height:"100vh",}} src="https://datav.aliyun.com/share/7bc00be57740d2d790e46aeb8b274226"/>
+         </Col>
        </Row>
       </div>
       

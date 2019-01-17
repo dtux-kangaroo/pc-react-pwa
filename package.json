@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "dtux",
   "scripts": {
-    "build": "rimraf dist && webpack --bail --progress --profile --config ./build/prod.js",
+    "build": " webpack --bail --progress --profile --config ./build/prod.js",
     "dev": "webpack-dev-server --progress --colors --config ./build/dev.js",
     "test-watch": "karma start --auto-watch --no-single-run",
     "start": "npm run dev",
     "newPage": "node ./src/scripts/newPage.js",
     "newCom": "node ./src/scripts/newCom.js",
-    "preview": "pushstate-server ./dist 1234"
+    "preview": "pushstate-server ./dist 9090",
+    "push:gh-pages":"./scripts/pushPages.sh"
   },
   "license": "MIT",
   "dependencies": {
@@ -25,6 +26,7 @@
     "mirror-creator": "^1.1.0",
     "moment": "^2.22.2",
     "monaco-editor": "^0.14.3",
+    "ngrok": "^3.1.0",
     "object-assign": "^4.1.1",
     "prop-types": "^15.6.1",
     "react": "^16.4.2",

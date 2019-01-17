@@ -27,16 +27,20 @@ export default class MainLayout extends Component {
   render() {
     const {  navData,match, location } = this.props;
     return (
-       <Layout className="main-layout">
-        <Header><TopBar location={location}  navData={navData.topNav} /></Header>
-        <Layout className="top-layout">
-          <SideBar location={location}  navData={navData.sideNav}/>
-          <Layout>
-            <div className="content">{this.props.children}</div>
-            <Foot/>
-          </Layout>
-        </Layout>
-      </Layout>
+      //  <Layout className="main-layout">
+      //   {/* <Header><TopBar location={location}  navData={navData.topNav} /></Header> */}
+      //   <Layout className="top-layout">
+      //     {/* <SideBar location={location}  navData={navData.sideNav}/> */}
+      //     <Layout>
+      //       <div className="content">{this.props.children}</div>
+      //       <Foot/>
+      //     </Layout>
+      //   </Layout>
+      // </Layout>
+      <Layout>
+      <div className="content">{this.props.children}</div>
+      <Foot/>
+    </Layout>
     );
   }
 }
