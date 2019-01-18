@@ -131,7 +131,7 @@
         .hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/));
       window.addEventListener("load", function () {
         "serviceWorker" in navigator && ("https:" === window.location.protocol || o) && navigator.serviceWorker.register(
-          "service-worker.js").then(function (o) {
+          "/pc-react-pwa/service-worker.js").then(function (o) {
           o.onupdatefound = function () {
             if (navigator.serviceWorker.controller) {
               var n = o.installing;
