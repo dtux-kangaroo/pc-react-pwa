@@ -5,7 +5,7 @@ import Uploader from '../../components/uploader'
 import Downloader from '../../components/downloader'
 import MapDrap from '../../components/mapDrap'
 import './style.scss'
-import apis from "../../constants/apis";
+import { URL } from "@/api/index";
 
 // import { ChinaMap2d } from 'easyv-components/src/components/chinaMap2d/index.jsx';
 // import { config } from 'easyv-components/src/components/chinaMap2d/js/config';
@@ -38,7 +38,7 @@ export default class UploadAndDown extends Component {
 					<Uploader 
 						name="file"
 						title="普通上传"
-						action={apis.saveTabelData}/>
+						action={URL.saveTabelData}/>
 				<Divider orientation="left">多文件上传</Divider>
 					<Uploader 
 						multiple={true}

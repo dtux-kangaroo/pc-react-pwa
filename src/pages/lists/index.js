@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { List, message, Modal, Card, Input, Button } from "antd";
 import moment from "moment";
-import http from "../../utils/http";
-import apis from "../../constants/apis";
+import { API } from "@/api/index";
 import './style.scss'
 const confirm = Modal.confirm;
 const Search = Input.Search;
@@ -56,14 +55,14 @@ export default class Lists extends Component {
                 let params = {
                     id: item.id
                 }
-                http.delete(apis.deleteList, params).then((res) => {
-                    if (res.result) {
-                        message.success("删除成功！");
-                        _this.getListData();
-                    } else {
-                        message.warning(res.message);
-                    }
-                })
+                // http.delete(apis.deleteList, params).then((res) => {
+                //     if (res.result) {
+                //         message.success("删除成功！");
+                //         _this.getListData();
+                //     } else {
+                //         message.warning(res.message);
+                //     }
+                // })
             },
             onCancel() {
                 console.log('Cancel');
@@ -90,7 +89,7 @@ export default class Lists extends Component {
             pageSize: page.pageSize,
             search,
         }
-        http.get(apis.getListData, params).then((res) => {
+        API.getListData(params).then((res) => {
             if (res.result) {
                 this.setState({
                     listData: res.data.data,

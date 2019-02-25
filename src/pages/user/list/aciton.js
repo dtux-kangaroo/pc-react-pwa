@@ -1,7 +1,7 @@
 import {listType} from './constant';
 import { message } from 'antd';
-import http from '../../../utils/http'
-import apiUrl from '../../../constants/apis';
+
+import { API } from "@/api/index";
 
 const userList = (data) => ({
   type: listType.GET_DATA,
@@ -12,12 +12,13 @@ const userList = (data) => ({
 })
 export const getUserList = (params) => async (dispatch, getState) => {
   try {
-      let response = await http.get(apiUrl.getUserList, params);
-      if (response.result) {
-          await dispatch(userList(response.data));
-      } else {
-          //返回失败
-      }
+      API.getUserList(params).then(response => {
+        if (response.result) {
+            dispatch(userList(response.data));
+        } else {
+            //返回失败
+        }
+      });
   } catch (error) {
       console.log('error: ', error)
   }

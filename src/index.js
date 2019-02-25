@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import Routers from './router'
 import "assets/styles/index.scss";
 import store from './store'
+import  '@babel/polyfill'
 
 
 const render = Component =>
